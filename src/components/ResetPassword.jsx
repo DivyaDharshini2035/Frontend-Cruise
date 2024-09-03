@@ -12,7 +12,7 @@ const ResetPassword = () => {const [email, setEmail] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-            await axios.post(`http://localhost:3010/client/resetpassword/${token}`, { 
+            await axios.post(`https://backend-cruise.onrender.com/client/resetpassword/${token}`, { 
                 password,
         
             }).then(response=>{
