@@ -9,7 +9,7 @@ const ForgotPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3010/client/forgotpassword', {
+            const response = await axios.post('https://backend-cruise.onrender.com/client/forgotpassword', {
                 email
             });
             if (response.data.status) {
