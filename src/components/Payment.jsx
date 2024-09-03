@@ -28,7 +28,7 @@ const Payment = ({ bookingDetails }) => {
       
       if (stripetoken && stripetoken.id) {
 
-      axios.post("http://localhost:3010/client/payment",{tokenId:stripetoken.id,
+      axios.post("https://backend-cruise.onrender.com/client/payment",{tokenId:stripetoken.id,
         amount:price
       }).then((res)=>{
         if(res.data.stripeErr){
