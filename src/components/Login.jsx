@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3010/client/login', {
+            const response = await axios.post('https://backend-cruise.onrender.com/client/login', {
                 email,
                 password
             });
