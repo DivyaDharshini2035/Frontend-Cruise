@@ -20,7 +20,7 @@ const Explore = () => {
             navigate('/login');
             return;
         }
-       const res=await axios.get('http://localhost:3010/client/verify', {
+       const res=await axios.get('https://backend-cruise.onrender.com/client/verify', {
         headers: { Authorization: `Bearer ${token}` }
     });
           if(res.data.status){
@@ -39,7 +39,7 @@ const Explore = () => {
 
     const fetchData= async()=>{
     try{
-      const response=await axios.get('http://localhost:3010/api/explore/getallcruises');
+      const response=await axios.get('https://backend-cruise.onrender.com/api/explore/getallcruises');
       const data=response.data.cruise;
       console.log(response.data)
       setCruises(data);
