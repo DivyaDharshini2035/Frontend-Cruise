@@ -12,14 +12,7 @@ const Explore = () => {
     const navigate = useNavigate();
     axios.defaults.withCredentials=true;
     useEffect(()=>{
-      const verifyUser=async()=>{
-      try{
-        const token = localStorage.getItem('token');
-        console.log(token);
-        if (!token) {
-            navigate('/login');
-            return;
-        }
+     
        const res=await axios.get('https://backend-cruise.onrender.com/client/verify', {
         headers: { Authorization: `Bearer ${token}` }
     });
